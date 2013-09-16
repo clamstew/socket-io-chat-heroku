@@ -1,5 +1,24 @@
 @import 'nib'
 
+
+.clearfix:after 
+  content: "."
+  display: block
+  clear: both
+  visibility: hidden
+  line-height: 0
+  height: 0
+ 
+.clearfix 
+  display: inline-block
+ 
+html[xmlns] .clearfix
+  display: block
+ 
+* html .clearfix
+  height: 1%
+
+
 body
   background: #2f2f2f
   margin 0
@@ -15,8 +34,21 @@ header#main-header
   height: 50px
 
 header #content-wrapper
-  width 900px
+  width 350px
   margin 0 auto
+  background red
+
+header #content-wrapper span
+  color: #fff
+  font-family: sans-serif
+  font-weight: bold
+  float left
+  margin 11px 0 0 10px
+  font-size 26px
+
+header #content-wrapper img
+  margin-top 15px
+  float left
 
 #chat, #nickname, #messages
   width 600px
@@ -25,6 +57,7 @@ header #content-wrapper
   position relative
   border 1px solid #ccc
   margin 0 auto
+  margin-top 20px
 
 #nickname, #connecting
   position absolute
