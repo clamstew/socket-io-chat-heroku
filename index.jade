@@ -38,6 +38,8 @@ html
       });
 
       function message (from, msg) {
+        // msg.text(msg).html();
+        msg = escape(msg);
         $('#lines').append($('<p>').append($('<b>').text(from), msg));
       }
 
